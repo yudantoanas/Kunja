@@ -10,35 +10,29 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/', function () {
-    return redirect('list-modul');
+	return redirect('list-praktikum');
 });
 
-// Route::get('/test-key', function () {
-// 	$text = file_get_contents('storage/keys/'. str_replace(' ', '', "tes key") . '.txt');
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('{id}/add-modul', 'ModulController@addModul');
+	Route::get('add-praktikum', 'PraktikumController@addPraktikum');
+	Route::get('edit-praktikum/{id}', 'PraktikumController@editPraktikum');
 
-// 	$correct = "aaaaaaaaaabbbbbbbbbb";
+	Route::post('store-modul', 'ModulController@store')->name('store');
+	Route::post('store-praktikum', 'PraktikumController@store');
+	Route::post('update-praktikum', 'PraktikumController@update');
+});
 
-// 	$nilai = 0;
-// 	for ($i=0; $i < strlen($text); $i++ ) { 
-// 		if ($text[$i] == $correct[$i]) {
-// 			$nilai++;
-// 		}
-// 	}
-
-//     return view('test', compact('nilai'));
-// });
-
-Route::get('list-modul/{id}', 'ModulController@index');
 Route::get('list-praktikum', 'PraktikumController@index');
-
-Route::get('add-modul/{id}', 'ModulController@addModul');
-Route::get('add-praktikum', 'PraktikumController@addPraktikum');
+Route::get('{id}/list-modul', 'ModulController@index');
 
 Route::get('modul/{id}', 'ModulController@showModul');
 Route::get('modul/{id}/test', 'ModulController@showTest');
+Route::get('modul/{id}/test-akhir', 'ModulController@showAkhir');
 
-Route::post('store-modul', 'ModulController@store')->name('modul');
-Route::post('store-praktikum', 'PraktikumController@store');
 Route::post('eval-test/{noModul}', 'ModulController@evalTest');

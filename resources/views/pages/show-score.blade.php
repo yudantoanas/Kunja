@@ -39,9 +39,16 @@
 			</strong>
 		</div>
 	</div>
+	<div class="row" style="text-align: center">
+		<a href="{{ URL($id_praktikum . '/list-modul') }}" class="waves-effect center waves-light btn-large">Kembali</a>
+	</div>
 </main>
 @endsection
 
 @section('footer')
 @include('include.footer')
+@endsection
+
+@section('other')
+{{-- <script>setTimeout(function(){window.location.href="{{ URL($id_praktikum . '/list-modul') }}"},3000);</script> --}}
 @endsection

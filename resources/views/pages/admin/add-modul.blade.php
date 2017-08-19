@@ -14,7 +14,7 @@
             @endforeach
         </ul>
     @endif    
-	<form method="post" action="{{ route('modul') }}" enctype="multipart/form-data">
+	<form method="post" action="{{ route('store') }}" enctype="multipart/form-data">
 		{{ csrf_field() }}
 		<div class="row">
 	    	<h5>Tambah Modul : {{ $dataPraktikum->nama_praktikum }}</h5>
@@ -79,7 +79,7 @@
 		        <input type="file" name="tesakhir_file">
 		      </div>
 		      <div class="file-path-wrapper">
-		        <input placeholder="Upload Tes Awal" class="file-path validate" type="text">
+		        <input placeholder="Upload Tes Akhir" class="file-path validate" type="text">
 		      </div>
 		    </div>
 		</div>

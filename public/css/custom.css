@@ -1,0 +1,19 @@
+.container-fluid {
+	padding: 0 20px;
+}
+
+.fab-bottom-right {
+	position : absolute;
+	bottom : 100px;
+	right: 100px;
+}
+
+.fab-card-left {
+	right: 120px;
+}
+.fab-card-center {
+	right: 72px;
+}
+.fab-card-right {
+	right: 0px;
+}

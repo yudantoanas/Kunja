@@ -14,16 +14,19 @@ class PraktikumController extends Controller
         // get all praktikum data
         $datas = Praktikum::all();
 
-        // create new Modul object
-        $modul = new Modul();
-
-        return view('pages.list-praktikum', compact('datas', 'modul'));
+        return view('pages.list-praktikum', compact('datas'));
         // dd($datas->judul_modul);
     }
 
     // showing add praktikum form
     public function addPraktikum() {
     	return view('pages.admin.add-praktikum');
+    }
+
+    public function editPraktikum($id) {
+        $praktikum = Praktikum::find($id);
+
+        return view('pages.admin.edit-praktikum', compact('praktikum'));
     }
 
     // storing praktikum data
@@ -34,5 +37,14 @@ class PraktikumController extends Controller
 		]);
 
     	return redirect('list-praktikum');
+    }
+
+    public function update(Request $req) {
+        $praktikum = Praktikum::find($req->id);
+        $praktikum->nama_praktikum = $req->nama_praktikum;
+        $praktikum->jumlah_modul = $req->jumlah_modul;
+        $praktikum->save();
+
+        return redirect('list-praktikum');
     }
 }

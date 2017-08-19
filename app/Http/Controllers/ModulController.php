@@ -16,13 +16,14 @@ class ModulController extends Controller
 {
     // showing list of modul
     public function index($idPraktikum) {
-    	// retrieve all Modul's data
+        // retrieve all Modul's data
     	$modules = new Modul();
+        $id_praktikum = $idPraktikum;
         $nama_praktikum = Praktikum::where('id', $idPraktikum)->value('nama_praktikum');
         
         $datas = $modules->where('id_praktikum', $idPraktikum)->get();
 
-    	return view('pages.list-modul', compact('datas', 'nama_praktikum'));
+    	return view('pages.list-modul', compact('datas', 'nama_praktikum', 'id_praktikum'));
     }
 
     public function addModul($id) {
@@ -30,6 +31,12 @@ class ModulController extends Controller
 
     	return view('pages.admin.add-modul', compact('dataPraktikum'));	
     }
+
+    public function editModul($id) {
+        $praktikum = Praktikum::find($id);
+
+        return view('pages.admin.add-modul', compact('praktikum')); 
+    }    
 
     // storing uploaded files
     public function store(UploadRequest $req) {
@@ -52,7 +59,7 @@ class ModulController extends Controller
             'tesakhir_file' => $tesakhir, // store the path and filename
     		]);
 
-    	return redirect('list-praktikum');
+    	return redirect( $req->id_praktikum . '/list-modul');
     }
 
     // showing modul pdf
@@ -69,6 +76,7 @@ class ModulController extends Controller
         return view('pages.show-test', compact('modul'));
     }
 
+    // Evaluating test
     public function evalTest(Request $req, $noModul) {
         /* parse key file */
         $key = file_get_contents(
@@ -86,6 +94,8 @@ class ModulController extends Controller
         // find modul by id
         $modul = Modul::find($req->test_id);
 
-        return view('pages.show-score', compact('score', 'modul'));
+        $id_praktikum = $req->praktikum_id;
+
+        return view('pages.show-score', compact('score', 'modul', 'id_praktikum'));
     }
 }

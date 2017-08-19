@@ -6,53 +6,26 @@
 
 @section('content')
 <main class="container">
-	<div>
-		<ul class="collection-with-header">
-			<li class="collection-header"><h5>List Praktikum</h5></li>
-			@foreach($datas as $praktikum)
-	      	<li class="collection-item" style="line-height: 50px;">
-	      		<div>
-	      			{{ $praktikum->nama_praktikum }} - <strong style="color: #9e9e9e; font-weight: normal;">{{ $praktikum->jumlah_modul }} Modul</strong>
-	      			
-	      			{{-- Check id_praktikum occurences in Modul's table --}}
-	      			@php
-	      				$occur = $modul->where('id_praktikum', $praktikum->id)->get();
-	      			@endphp
-	      			{{-- if theres is no occurences, then the button below is disabled. Vise versa --}}
-	      			@if (count($occur) == 0) 
-		      		<a href="/list-modul/{{ $praktikum->id }}" class="secondary-content waves-effect waves-light btn disabled">	
-		      			<i class="material-icons left">list</i>List Modul
-		      		</a>
-		      		@else 
-		      		{{-- end --}}
+	<div class="row">
+		@foreach($datas as $praktikum)
+		<div class="col s12 m4">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">
+                Praktikum <br>
+                <strong>{{ $praktikum->nama_praktikum }}</strong>
+              </span>
+            </div>
+            <div class="card-action">
+              <a href="{{ URL($praktikum->id . '/list-modul') }}">View</a>
 
-		      		<a href="/list-modul/{{ $praktikum->id }}" class="secondary-content waves-effect waves-light btn">	
-		      			<i class="material-icons left">list</i>List Modul
-		      		</a>
-		      		@endif
-
-
-		      		{{-- When User is admin --}}
-		      		<a href="/add-modul/{{ $praktikum->id }}" class="secondary-content waves-effect waves-light btn" style="margin-right: 5px;">
-		      			<i class="material-icons left">add</i>Add Modul
-		      		</a>
-		      		{{-- End --}}
-	      		</div>
-
-	      		{{-- @php
-	      			$occur = $modul->where('id_praktikum', $praktikum->id)->get();
-	      		@endphp 
-	      		<div>
-	      			Modul : 
-	      			@for($i=0; $i < count($occur); $i++)
-	      			<div class="chip">
-					    {{ $occur[$i]->judul_modul }}
-				  	</div>
-	      			@endfor
-	      		</div> --}}
-	  		</li>
-	  		@endforeach
-	    </ul>
+              @if(Auth::user())
+              <a href="{{ URL('edit-praktikum/' . $praktikum->id) }}">Edit</a>
+              @endif
+            </div>
+          </div>
+        </div>
+		@endforeach
 	</div>
 </main>
 @endsection
