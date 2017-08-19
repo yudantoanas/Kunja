@@ -15,8 +15,7 @@ Auth::routes();
 // Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/', function () {
-	return redirect('list-praktikum');
-	//
+	return view('pages/home');
 });
 
 Route::group(['middleware' => 'auth'], function () {

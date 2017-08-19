@@ -46,7 +46,7 @@
 				    		@endfor
 				    </div>
 				    @endfor
-				    <button class="btn waves-effect waves-light" type="submit" name="action" style="margin-left: 30%;margin-top: 5%;">Submit
+				    <button class="btn waves-effect waves-light blue white-text right" type="submit" name="action" style="margin-bottom: 20px">Submit
 				    	<i class="material-icons right">send</i>
 				  	</button>
 				    {{-- end of loop --}}

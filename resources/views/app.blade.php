@@ -15,6 +15,7 @@
         <link type="text/css" rel="stylesheet" href="{{ URL::asset('css/custom.css') }}"  media="screen,projection"/>
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        @yield('css')
     </head>
     <body>
         @yield('header')

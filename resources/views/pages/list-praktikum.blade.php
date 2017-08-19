@@ -9,14 +9,14 @@
 	<div class="row">
 		@foreach($datas as $praktikum)
 		<div class="col s12 m4">
-          <div class="card blue-grey darken-1">
+          <div class="card blue">
             <div class="card-content white-text">
               <span class="card-title">
                 Praktikum <br>
                 <strong>{{ $praktikum->nama_praktikum }}</strong>
               </span>
             </div>
-            <div class="card-action">
+            <div class="card-action white">
               <a href="{{ URL($praktikum->id . '/list-modul') }}">View</a>
 
               @if(Auth::user())

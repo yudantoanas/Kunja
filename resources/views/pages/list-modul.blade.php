@@ -7,7 +7,7 @@
 @section('content')
 <main class="container">
     <div class="center">
-      <h5>Modul {{ $nama_praktikum }}</h5>
+      <h4>Modul {{ $nama_praktikum }}</h4>
     </div>
     <div class="row">
     	@foreach($datas as $modul)
@@ -15,7 +15,7 @@
           <div class="card">
             <div class="card-image">
               <img src="{{ asset('storage/' . $modul->modul_image) }}">
-              
+
               <!-- check if test akhir status is checked -->
               <!-- <a class="btn-floating halfway-fab waves-effect waves-light red" style="right: 120px;"><i class="material-icons">add</i></a> -->
 
