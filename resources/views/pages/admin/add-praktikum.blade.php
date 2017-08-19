@@ -1,7 +1,7 @@
 @extends('app')
 
 @slot("title")
-	
+
 @endslot
 
 @section('header')
@@ -13,7 +13,7 @@
     <div class="row">
     	<h5>Tambah Praktikum</h5>
     </div>
-	
+
 	{{-- Display error when validating form --}}
 	@if (count($errors) > 0)
         <ul>
@@ -39,7 +39,7 @@
 			</div>
 
 
-		    <button class="btn waves-effect waves-light" type="submit" name="action">
+		    <button class="btn waves-effect waves-light blue" type="submit" name="action">
 		    	Submit <i class="material-icons right">send</i>
 		  	</button>
 		</form>

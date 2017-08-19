@@ -23,7 +23,7 @@
       <p class="flow-text">Impossible is nothing</p>
     </div>
   </div>
-
+  <hr>
   <div class="row">
     <div class="col m12">
       <h5>Tentang Kami</h5>
@@ -34,7 +34,7 @@
   <div class="row">
     <div class="col m12">
       <h5>Daftar Asisten</h5>
-      <table class="table">
+      <table class="table highlight">
         <thead>
           <tr>
             <th>Kode Asisten</th>

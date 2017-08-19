@@ -1,68 +1,53 @@
 @extends('app')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
-                <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('login') }}">
-                        {{ csrf_field() }}
-
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="username" class="col-md-4 control-label">Username</label>
-
-                            <div class="col-md-6">
-                                <input id="username" type="text" class="form-control" name="username" value="{{ old('username') }}" required autofocus>
-
-                                @if ($errors->has('username'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('username') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Login
-                                </button>
-
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    Forgot Your Password?
-                                </a>
-                            </div>
-                        </div>
-                    </form>
+  @include('include.header')
+  <main class="container">
+    <div class="row" style="margin-top: 20px">
+        <div class="col s12 m6 push-m3">
+          <div class="card">
+            <div class="card-content white-text">
+              <span class="card-title blue-text">Login Asisten</span>
+              <form class="form-horizontal" method="POST" action="{{ route('login') }}">
+                  {{ csrf_field() }}
+                <div class="input-field col m12 s12">
+                  <i class="material-icons prefix blue-text">account_circle</i>
+                  <input id="icon_prefix" type="text" class="validate" name="username">
+                  <label for="icon_prefix">Username</label>
                 </div>
+                <div class="input-field col m12 s12">
+                  <i class="material-icons prefix blue-text">lock</i>
+                  <input id="icon_telephone" type="password" class="validate"  name="password">
+                  <label for="icon_telephone">Password</label>
+                </div>
+                <hr>
+                <button type="submit" name="button" class="btn blue" style="width: 100%">Sign in</button>
+              </form>
             </div>
+          </div>
         </div>
+      </div>
+    {{-- <div class="row">
+      <div class="col m12">
+        <h4>Login Asisten</h4>
+      </div>
     </div>
-</div>
+    <div class="row">
+      <form class="form-horizontal" method="POST" action="{{ route('login') }}">
+          {{ csrf_field() }}
+        <div class="input-field col m12">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="icon_prefix" type="text" class="validate" name="username">
+          <label for="icon_prefix">Username</label>
+        </div>
+        <div class="input-field col m12">
+          <i class="material-icons prefix">lock</i>
+          <input id="icon_telephone" type="password" class="validate"  name="password">
+          <label for="icon_telephone">Password</label>
+        </div>
+        <button type="submit" name="button" class="btn blue" style="width: 100%">Sign in</button>
+      </form>
+    </div> --}}
+  </main>
+  @include('include.footer')
 @endsection

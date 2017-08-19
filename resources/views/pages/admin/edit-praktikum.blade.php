@@ -9,7 +9,7 @@
     <div class="row">
     	<h5>Edit Praktikum</h5>
     </div>
-	
+
 	{{-- Display error when validating form --}}
 	@if (count($errors) > 0)
         <ul>
@@ -35,7 +35,7 @@
 		        </div>
 			</div>
 
-		    <button class="btn waves-effect waves-light" type="submit" name="action">
+		    <button class="btn waves-effect waves-light blue" type="submit" name="action">
 		    	Update <i class="material-icons right">send</i>
 		  	</button>
 		</form>

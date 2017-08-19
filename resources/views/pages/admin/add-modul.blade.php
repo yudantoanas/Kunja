@@ -13,7 +13,7 @@
                 <li>{{ $error }}</li>
             @endforeach
         </ul>
-    @endif    
+    @endif
 	<form method="post" action="{{ route('store') }}" enctype="multipart/form-data">
 		{{ csrf_field() }}
 		<div class="row">
@@ -42,7 +42,7 @@
 
 		<div class="row">
 			<div class="file-field input-field col s12 m6">
-		      <div class="btn" style="border-radius: 5px;">
+		      <div class="btn blue" style="border-radius: 5px;">
 		        <span><i class="material-icons">insert_photo</i></span>
 		        <input type="file" name="modul_image">
 		      </div>
@@ -52,7 +52,7 @@
 		    </div>
 
 		    <div class="file-field input-field col s12 m6">
-		      <div class="btn" style="border-radius: 5px;">
+		      <div class="btn blue" style="border-radius: 5px;">
 		        <span><i class="material-icons">cloud_upload</i></span>
 		        <input type="file" name="modul_file">
 		      </div>
@@ -64,7 +64,7 @@
 
 		<div class="row">
 			<div class="file-field input-field col s12 m6">
-		      <div class="btn" style="border-radius: 5px;">
+		      <div class="btn blue" style="border-radius: 5px;">
 		        <span><i class="material-icons">insert_drive_file</i></span>
 		        <input type="file" name="tesawal_file">
 		      </div>
@@ -74,8 +74,8 @@
 		    </div>
 
 		    <div class="file-field input-field col s12 m6">
-		      <div class="btn" style="border-radius: 5px;">
-		        <span><i class="material-icons">insert_drive_file</i></span>
+		      <div class="btn blue" style="border-radius: 5px;">
+		        <span><i class="material-icons ">insert_drive_file</i></span>
 		        <input type="file" name="tesakhir_file">
 		      </div>
 		      <div class="file-path-wrapper">
@@ -85,7 +85,7 @@
 		</div>
 
 		<div class="row">
-			<button class="btn waves-effect waves-light" type="submit" name="action" style="width: 100%;">
+			<button class="btn waves-effect waves-light blue" type="submit" name="action" style="width: 100%;">
 		    	Submit
 		  	</button>
 		</div>
