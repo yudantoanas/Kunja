@@ -1,5 +1,5 @@
 <nav>
-	<div class="nav-wrapper">
+	<div class="nav-wrapper blue">
 	  <a href="/" class="brand-logo center">
 	  	<img src="{{ URL::asset('imgs/logo-white.png') }}" width="200px">
 	  </a>

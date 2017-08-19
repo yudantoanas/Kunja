@@ -16,16 +16,17 @@ Auth::routes();
 
 Route::get('/', function () {
 	return redirect('list-praktikum');
+	//
 });
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('{id}/add-modul', 'ModulController@addModul');
-	Route::get('add-praktikum', 'PraktikumController@addPraktikum');
-	Route::get('edit-praktikum/{id}', 'PraktikumController@editPraktikum');
+		Route::get('add-praktikum', 'PraktikumController@addPraktikum');
+		Route::get('edit-praktikum/{id}', 'PraktikumController@editPraktikum');
 
-	Route::post('store-modul', 'ModulController@store')->name('store');
-	Route::post('store-praktikum', 'PraktikumController@store');
-	Route::post('update-praktikum', 'PraktikumController@update');
+		Route::post('store-modul', 'ModulController@store')->name('store');
+		Route::post('store-praktikum', 'PraktikumController@store');
+		Route::post('update-praktikum', 'PraktikumController@update');
 });
 
 Route::get('list-praktikum', 'PraktikumController@index');
