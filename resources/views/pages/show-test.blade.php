@@ -62,7 +62,7 @@
 @endsection
 
 @section('other')
-<script src="{{ URL::asset('js/pdfobject/pdfobject.js') }}"></script>
+<script src="{{ URL::asset('js/pdfobject.js') }}"></script>
 <script>
 	PDFObject.embed("{{ asset('storage/'.$modul->tesawal_file) }}", '#pdf');
 </script>
