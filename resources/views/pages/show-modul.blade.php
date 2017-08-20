@@ -4,7 +4,7 @@
 {{ $modul->judul }}
 @endsection
 
-@section('other')
+@section('other-js')
 <script src="{{ URL::asset('js/pdfobject.js') }}"></script>
 <script>
 	PDFObject.embed("{{ asset('storage/'.$modul->modul_file) }}", document.body);

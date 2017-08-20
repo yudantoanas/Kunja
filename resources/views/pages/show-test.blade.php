@@ -61,9 +61,9 @@
 @include('include.footer')
 @endsection
 
-@section('other')
+@section('other-js')
 <script src="{{ URL::asset('js/pdfobject.js') }}"></script>
-<script>
-	PDFObject.embed("{{ asset('storage/'.$modul->tesawal_file) }}", '#pdf');
+<script type="text/javascript">
+    PDFObject.embed("{{ asset('storage/modul/files/tes_awal/lseU9byQkDLgaAhOS5j8gP9tn7t3rAjXHhR5UGaG.pdf') }}", '#pdf');
 </script>
 @endsection
