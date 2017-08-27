@@ -8,6 +8,7 @@ use Smalot\PdfParser\Parser;
 
 use App\Modul;
 use App\Praktikum;
+use App\Praktikan;
 
 use Storage;
 use DB;
@@ -57,7 +58,7 @@ class ModulController extends Controller
             'modul_file' => $modul, // store the path and filename
             'tesawal_file' => $tesawal, // store the path and filename
             'tesakhir_file' => $tesakhir, // store the path and filename
-    		]);
+		]);
 
     	return redirect( $req->id_praktikum . '/list-modul');
     }
@@ -83,6 +84,14 @@ class ModulController extends Controller
             'storage/keys/ta_modul' .$noModul. '.txt'
         );
         /* end */
+
+        // saving user data to database
+        Praktikan::create([
+            'nama' => $req->nama_praktikan,
+            'nim' => $req->nim_praktikan,
+            'kelas' => $req->kelas_praktikan,
+            'shift' => $req->shift_praktikan,
+        ]);
 
         // counting score based on the answered choices
         $answer = $req->answer;

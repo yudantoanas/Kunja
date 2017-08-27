@@ -10,14 +10,34 @@
 
 @section('content')
 <main>
-	<div class="row" style="height: 83vh; margin: 0;">
-		<div id="pdf" class="col s12 m8" style="padding: 0; height: 100%;"></div>
-		<div class="col s12 m4">
+	<div class="row" style="height: 85vh; margin: 0;">
+		<div id="pdf" class="col s12 m7" style="padding: 0; height: 100%;"></div>
+		<div class="col s12 m5">
 			<div class="container" style="padding-top: 30px;">
 				<form method="post" action="/eval-test/{{ $modul->no_modul }}">
 					{{ csrf_field() }}
 					<input type="hidden" name="test_id" value="{{ $modul->id }}">
-					<input type="hidden" name="praktikum_id" value="{{ $modul->praktikum->id }}"><p></p>
+					<input type="hidden" name="praktikum_id" value="{{ $modul->praktikum->id }}">
+					<input type="hidden" name="praktikum" value="{{ $modul->praktikum->nama_praktikum }}">
+
+					<div class="row">
+						<div class="input-field col s12 m3">
+							<input type="text" name="nama_praktikan" id="nama">
+							<label for="nama">Nama</label>
+						</div>
+						<div class="input-field col s12 m3">
+							<input type="text" name="nim_praktikan" id="nim">
+							<label for="nama">NIM</label>
+						</div>
+						<div class="input-field col s12 m3">
+							<input type="text" name="kelas_praktikan" id="kelas">
+							<label for="kelas">Kelas</label>
+						</div>
+						<div class="input-field col s12 m3">
+							<input type="text" name="shift_praktikan" id="shift">
+							<label for="shift">Shift</label>
+						</div>
+					</div>
 
 				    @for($i=0; $i < 10; $i++)
 				    <div class="row">
@@ -64,6 +84,6 @@
 @section('other-js')
 <script src="{{ URL::asset('js/pdfobject.js') }}"></script>
 <script type="text/javascript">
-    PDFObject.embed("{{ asset('storage/modul/files/tes_awal/lseU9byQkDLgaAhOS5j8gP9tn7t3rAjXHhR5UGaG.pdf') }}", '#pdf');
+    PDFObject.embed("{{ asset('storage/' . $modul->tesawal_file) }}", '#pdf');
 </script>
 @endsection

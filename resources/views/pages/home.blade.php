@@ -18,9 +18,11 @@
 @section('content')
 <main class="container">
   <div class="row full-height valign-wrapper">
-    <div class="col m12 center">
-      <h4>Dasar Pemrograman Lab</h4>
-      <p class="flow-text">Impossible is nothing</p>
+    <div class="col m12 center" style="padding: 100px;">
+      <img src="{{ asset('imgs/logo.jpg') }}" width="100%">
+      {{-- <h4>Dasar Pemrograman Lab</h4> --}}
+      {{-- <p class="flow-text">Impossible is nothing</p> --}}
+      <h4>We Came. We Learn. We Change the World</h4>
     </div>
   </div>
   <hr>
@@ -31,8 +33,90 @@
          Praktikum yang di handle oleh Daspro berjumlah 4 praktikum, diantaranya Algoritma Pemrograman (ALPRO) TI, Algoritma Pemrograman (ALPRO) SI, Struktur Data (Strukdat), Basis Data (Basdat) TI. Laboratorium Daspro beranggotakan mahasiswa dari tahun 1 hingga tahun ke 3 semester 5. Untuk periode saat ini Laboratorium Daspro memiliki  orang asisten aktif yang terdiri dari 18 orang asisten angkatan 2015.</p>
     </div>
   </div>
+  <h5>Daftar Asisten</h5>
   <div class="row">
-    <div class="col m12">
+    <div class="col m3">
+    <img src="{{ asset('img/foto/tfd.jpg')}}">
+    TFD
+    </div>
+    <div class="col m3">
+    <img src="{{ asset('imgs/foto/ncp.jpg')}}">
+    NCP
+    </div>
+    <div class="col m3">
+    <img src="{{ asset('imgs/foto/tfd.jpg')}}">
+    AHA
+    </div>
+    <div class="col m3">
+    <img src="{{ asset('imgs/foto/tfd.jpg')}}">
+    RFT
+    </div>
+
+    <div class="col m3">
+    <img src="{{ asset('imgs/foto/tfd.jpg')}}">
+    IGO
+    </div>
+    <div class="col m3">
+    <img src="{{ asset('imgs/foto/tfd.jpg')}}">
+    SAN
+    </div>
+    <div class="col m3">
+    <img src="{{ asset('imgs/foto/tfd.jpg')}}">
+    OJI
+    </div>
+    <div class="col m3">
+    <img src="{{ asset('imgs/foto/tfd.jpg')}}">
+    GWD
+    </div>
+
+    <div class="col m3">
+    <img src="{{ asset('imgs/foto/tfd.jpg')}}">
+    AUL
+    </div>
+    <div class="col m3">
+    <img src="{{ asset('imgs/foto/tfd.jpg')}}">
+    KNA
+    </div>
+    <div class="col m3">
+    <img src="{{ asset('imgs/foto/tfd.jpg')}}">
+    MAA
+    </div>
+    <div class="col m3">
+    <img src="{{ asset('imgs/foto/tfd.jpg')}}">
+    BAY
+    </div>
+
+    <div class="col m3">
+    <img src="{{ asset('imgs/foto/tfd.jpg')}}">
+    KEN
+    </div>
+    <div class="col m3">
+    <img src="{{ asset('imgs/foto/tfd.jpg')}}">
+    HAM
+    </div>
+    <div class="col m3">
+    <img src="{{ asset('imgs/foto/tfd.jpg')}}">
+    NAJ
+    </div>
+    <div class="col m3">
+    <img src="{{ asset('imgs/foto/tfd.jpg')}}">
+    NUB
+    </div>
+
+    <div class="col m3">
+    <img src="{{ asset('imgs/foto/tfd.jpg')}}">
+    VNY
+    </div>
+    <div class="col m3">
+    <img src="{{ asset('imgs/foto/tfd.jpg')}}">
+    DNN
+    </div>
+    <div class="col m3">
+    <img src="{{ asset('imgs/foto/tfd.jpg')}}">
+    ZAK
+    </div>
+    <div class="col m3"></div>
+    {{-- <div class="col m12">
       <h5>Daftar Asisten</h5>
       <table class="table highlight">
         <thead>
@@ -116,7 +200,7 @@
           </tr>
         </tbody>
       </table>
-    </div>
+    </div> --}}
   </div>
 </main>
 @endsection

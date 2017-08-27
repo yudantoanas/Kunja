@@ -43,18 +43,18 @@
 		<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 		<ul class="right hide-on-med-and-down">
 			<li><a href="/list-praktikum">List Praktikum</a></li>
-			<li><a href="/login">Login</a></li>
+			{{-- <li><a href="/login">Login</a></li> --}}
 		</ul>
 		<ul class="side-nav" id="mobile-demo">
       <li><a href="/list-praktikum">List Praktikum</a></li>
-			<li><a href="/login">Login</a></li>
+			{{-- <li><a href="/login">Login</a></li> --}}
 	@endif
   </div>
 </nav>
 @section('other')
 <script type="text/javascript">
-$( document ).ready(function(){
-	$(".button-collapse").sideNav();
-})
+  $( document ).ready(function(){
+  	$(".button-collapse").sideNav();
+  })
 </script>
 @endsection
