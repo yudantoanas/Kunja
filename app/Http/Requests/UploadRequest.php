@@ -28,7 +28,7 @@ class UploadRequest extends FormRequest
             'no_modul' => 'required',
             'judul_modul' => 'required',
             'penyusun_modul' => 'required',
-            'modul_image' => 'required|image|mimes:jpeg,jpg,bmp,png|max:4000',
+            'modul_image' => 'required|image|mimes:jpeg,jpg,png|max:5000',
             'modul_file' => 'required|file|mimes:pdf|max:10000',
             'tesawal_file' => 'required|file|mimes:pdf|max:10000',
             'tesakhir_file' => 'required|file|mimes:pdf|max:10000',

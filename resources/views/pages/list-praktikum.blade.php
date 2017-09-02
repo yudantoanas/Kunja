@@ -12,12 +12,13 @@
           <div class="card blue">
             <div class="card-content white-text">
               <span class="card-title">
-                Praktikum <br>
-                <strong>{{ $praktikum->nama_praktikum }}</strong>
+                <p style="font-size: 28pt;">Praktikum</p>
+                <strong style="font-size: 28pt;">{{ $praktikum->nama_praktikum }}</strong>
+                <p style="font-size: 12pt;">{{ $praktikum->jumlah_modul }} Modul</p>
               </span>
             </div>
             <div class="card-action white">
-              <a href="{{ URL($praktikum->id . '/list-modul') }}">View</a>
+              <a href="{{ URL($praktikum->id . '/list-modul') }}" style="font-size: 16pt;">View</a>
 
               @if(Auth::user())
               <a href="{{ URL('edit-praktikum/' . $praktikum->id) }}">Edit</a>

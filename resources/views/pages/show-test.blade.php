@@ -22,19 +22,19 @@
 
 					<div class="row">
 						<div class="input-field col s12 m3">
-							<input type="text" name="nama_praktikan" id="nama">
+							<input type="text" name="nama_praktikan" id="nama" required>
 							<label for="nama">Nama</label>
 						</div>
 						<div class="input-field col s12 m3">
-							<input type="text" name="nim_praktikan" id="nim">
+							<input type="text" name="nim_praktikan" id="nim" required>
 							<label for="nama">NIM</label>
 						</div>
 						<div class="input-field col s12 m3">
-							<input type="text" name="kelas_praktikan" id="kelas">
+							<input type="text" name="kelas_praktikan" id="kelas" required>
 							<label for="kelas">Kelas</label>
 						</div>
 						<div class="input-field col s12 m3">
-							<input type="text" name="shift_praktikan" id="shift">
+							<input type="text" name="shift_praktikan" id="shift" required>
 							<label for="shift">Shift</label>
 						</div>
 					</div>

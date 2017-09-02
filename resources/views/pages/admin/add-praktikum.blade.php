@@ -28,12 +28,12 @@
 
 			<div class="row">
 				<div class="input-field col s12 m10">
-		          <input id="nama_praktikum" type="text" class="validate" name="nama_praktikum">
+		          <input id="nama_praktikum" type="text" class="validate" name="nama_praktikum" required>
 		          <label for="nama_praktikum">Nama Praktikum</label>
 		        </div>
 
 		        <div class="input-field col s12 m2">
-		          <input id="jumlah_modul" type="text" class="validate" name="jumlah_modul" >
+		          <input id="jumlah_modul" type="text" class="validate" name="jumlah_modul" required>
 		          <label for="jumlah_modul">Jumlah Modul</label>
 		        </div>
 			</div>

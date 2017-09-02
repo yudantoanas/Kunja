@@ -23,19 +23,19 @@
 
 		<div class="row">
 			<div class="input-field col s1">
-	          <input id="no_modul" type="text" 1lass="validate" name="no_modul">
+	          <input id="no_modul" type="text" 1lass="validate" placeholder="ex. 1" name="no_modul" required>
 	          <label for="no_modul">No</label>
 	        </div>
 
 			<div class="input-field col s11">
-	          <input id="judul" type="text" class="validate" name="judul_modul">
+	          <input id="judul" type="text" class="validate" placeholder="ex. Pengenalan OOP dan Inheritance" name="judul_modul" required>
 	          <label for="judul">Judul Modul</label>
 	        </div>
 		</div>
 
 		<div class="row">
 			<div class="input-field col s12">
-	          <input id="penyusun" type="text" class="validate" name="penyusun_modul">
+	          <input id="penyusun" type="text" class="validate" placeholder="ex. OJI, VNY, ZAK" name="penyusun_modul" required>
 	          <label for="penyusun">Penyusun</label>
 	        </div>
 		</div>
@@ -47,7 +47,7 @@
 		        <input type="file" name="modul_image">
 		      </div>
 		      <div class="file-path-wrapper">
-		        <input placeholder="Upload Cover Image" class="file-path validate" type="text">
+		        <input placeholder="format JPG, JPEG, PNG and max. size 5MB" class="file-path validate" type="text" required>
 		      </div>
 		    </div>
 
@@ -57,7 +57,7 @@
 		        <input type="file" name="modul_file">
 		      </div>
 		      <div class="file-path-wrapper">
-		        <input placeholder="Upload PDF" class="file-path validate" type="text">
+		        <input placeholder="format PDF and max. size 10MB" class="file-path validate" type="text" required>
 		      </div>
 		    </div>
 		</div>
@@ -69,19 +69,20 @@
 		        <input type="file" name="tesawal_file">
 		      </div>
 		      <div class="file-path-wrapper">
-		        <input placeholder="Upload Tes Awal" class="file-path validate" type="text">
+		        <input placeholder="format PDF and max. size 10MB" class="file-path validate" type="text" required>
 		      </div>
 		    </div>
 
-		    <div class="file-field input-field col s12 m6">
+		    <!-- Jika ada tugas akhir -->
+		    <!-- <div class="file-field input-field col s12 m6">
 		      <div class="btn blue" style="border-radius: 5px;">
 		        <span><i class="material-icons ">insert_drive_file</i></span>
 		        <input type="file" name="tesakhir_file">
 		      </div>
 		      <div class="file-path-wrapper">
-		        <input placeholder="Upload Tes Akhir" class="file-path validate" type="text">
+		        <input placeholder="Upload Tes Akhir" class="file-path validate" type="text" required>
 		      </div>
-		    </div>
+		    </div> -->
 		</div>
 
 		<div class="row">

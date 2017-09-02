@@ -19,188 +19,101 @@
 <main class="container">
   <div class="row full-height valign-wrapper">
     <div class="col m12 center" style="padding: 100px;">
-      <img src="{{ asset('imgs/logo.jpg') }}" width="100%">
-      {{-- <h4>Dasar Pemrograman Lab</h4> --}}
-      {{-- <p class="flow-text">Impossible is nothing</p> --}}
-      <h4>We Came. We Learn. We Change the World</h4>
+      <img src="{{ asset('imgs/logo-ead-trans.png') }}" width="50%">
     </div>
   </div>
   <hr>
   <div class="row">
     <div class="col m12">
-      <h5>Tentang Kami</h5>
-      <p>Laboratorium Dasar Pemrograman (DASPRO) merupakan salah satu laboratorium yang berada di bawah naungan Fakultas Rekayasa Industri dan termasuk laboratotium prodi Sistem Informasi. Laboratorium Daspro mulai berdiri pada tahun 2016. Laboratorium Daspro merupakan pecahan dari Laboratorium PRODASE. Sesuai dengan namanya, Daspro bergerak di bidang dasar programming seperti algoritma pemrograman dll.
-         Praktikum yang di handle oleh Daspro berjumlah 4 praktikum, diantaranya Algoritma Pemrograman (ALPRO) TI, Algoritma Pemrograman (ALPRO) SI, Struktur Data (Strukdat), Basis Data (Basdat) TI. Laboratorium Daspro beranggotakan mahasiswa dari tahun 1 hingga tahun ke 3 semester 5. Untuk periode saat ini Laboratorium Daspro memiliki  orang asisten aktif yang terdiri dari 18 orang asisten angkatan 2015.</p>
+      <h3>Tentang Kami</h3>
+      <p align="justify">Laboratorium Enterprise Application Development (EAD) merupakan salah satu laboratorium yang berada di bawah naungan Fakultas Rekayasa Industri dan termasuk laboratotium prodi Sistem Informasi. Laboratorium EAD merupakan pecahan dari Laboratorium PRODASE.
+         Praktikum yang di handle oleh EAD berjumlah 5 praktikum, diantaranya yaitu Object-Oriented Programming (OOP), Basis Data (Basdat) SI, Basis Data (Basdat) TI, Web Application Development (WAD), dan Mobile Application Development.</p>
     </div>
   </div>
-  <h5>Daftar Asisten</h5>
+  <hr>
+  <h3>Daftar Asisten</h3>
   <div class="row">
     <div class="col m3">
-    <img src="{{ asset('img/foto/tfd.jpg')}}">
-    TFD
+    <img class="profpic" src="{{ asset('imgs/foto/tfd.png')}}">
+    <p class="name">TFD</p>
     </div>
     <div class="col m3">
-    <img src="{{ asset('imgs/foto/ncp.jpg')}}">
-    NCP
+    <img class="profpic" src="{{ asset('imgs/foto/ncp.png')}}">
+    <p class="name">NCP</p>
     </div>
     <div class="col m3">
-    <img src="{{ asset('imgs/foto/tfd.jpg')}}">
-    AHA
+    <img class="profpic" src="{{ asset('imgs/foto/aha.png')}}">
+    <p class="name">AHA</p>
     </div>
     <div class="col m3">
-    <img src="{{ asset('imgs/foto/tfd.jpg')}}">
-    RFT
-    </div>
-
-    <div class="col m3">
-    <img src="{{ asset('imgs/foto/tfd.jpg')}}">
-    IGO
-    </div>
-    <div class="col m3">
-    <img src="{{ asset('imgs/foto/tfd.jpg')}}">
-    SAN
-    </div>
-    <div class="col m3">
-    <img src="{{ asset('imgs/foto/tfd.jpg')}}">
-    OJI
-    </div>
-    <div class="col m3">
-    <img src="{{ asset('imgs/foto/tfd.jpg')}}">
-    GWD
+    <img class="profpic" src="{{ asset('imgs/foto/rft.png')}}">
+    <p class="name">RFT</p>
     </div>
 
     <div class="col m3">
-    <img src="{{ asset('imgs/foto/tfd.jpg')}}">
-    AUL
+    <img class="profpic" src="{{ asset('imgs/foto/igo.png')}}">
+    <p class="name">IGO</p>
     </div>
     <div class="col m3">
-    <img src="{{ asset('imgs/foto/tfd.jpg')}}">
-    KNA
+    <img class="profpic" src="{{ asset('imgs/foto/san.png')}}">
+    <p class="name">SAN</p>
     </div>
     <div class="col m3">
-    <img src="{{ asset('imgs/foto/tfd.jpg')}}">
-    MAA
+    <img class="profpic" src="{{ asset('imgs/foto/oji.png')}}">
+    <p class="name">OJI</p>
     </div>
     <div class="col m3">
-    <img src="{{ asset('imgs/foto/tfd.jpg')}}">
-    BAY
-    </div>
-
-    <div class="col m3">
-    <img src="{{ asset('imgs/foto/tfd.jpg')}}">
-    KEN
-    </div>
-    <div class="col m3">
-    <img src="{{ asset('imgs/foto/tfd.jpg')}}">
-    HAM
-    </div>
-    <div class="col m3">
-    <img src="{{ asset('imgs/foto/tfd.jpg')}}">
-    NAJ
-    </div>
-    <div class="col m3">
-    <img src="{{ asset('imgs/foto/tfd.jpg')}}">
-    NUB
+    <img class="profpic" src="{{ asset('imgs/foto/gwd.png')}}">
+    <p class="name">GWD</p>
     </div>
 
     <div class="col m3">
-    <img src="{{ asset('imgs/foto/tfd.jpg')}}">
-    VNY
+    <img class="profpic" src="{{ asset('imgs/foto/aul.png')}}">
+    <p class="name">AUL</p>
     </div>
     <div class="col m3">
-    <img src="{{ asset('imgs/foto/tfd.jpg')}}">
-    DNN
+    <img class="profpic" src="{{ asset('imgs/foto/kna.png')}}">
+    <p class="name">KNA</p>
     </div>
     <div class="col m3">
-    <img src="{{ asset('imgs/foto/tfd.jpg')}}">
-    ZAK
+    <img class="profpic" src="{{ asset('imgs/foto/maa.png')}}">
+    <p class="name">MAA</p>
+    </div>
+    <div class="col m3">
+    <img class="profpic" src="{{ asset('imgs/foto/bay.png')}}">
+    <p class="name">BAY</p>
+    </div>
+
+    <div class="col m3">
+    <img class="profpic" src="{{ asset('imgs/foto/ken.png')}}">
+    <p class="name">KEN</p>
+    </div>
+    <div class="col m3">
+    <img class="profpic" src="{{ asset('imgs/foto/ham.png')}}">
+    <p class="name">HAM</p>
+    </div>
+    <div class="col m3">
+    <img class="profpic" src="{{ asset('imgs/foto/naj.png')}}">
+    <p class="name">NAJ</p>
+    </div>
+    <div class="col m3">
+    <img class="profpic" src="{{ asset('imgs/foto/nub.png')}}">
+    <p class="name">NUB</p>
+    </div>
+
+    <div class="col m3">
+    <img class="profpic" src="{{ asset('imgs/foto/vny.png')}}">
+    <p class="name">VNY</p>
+    </div>
+    <div class="col m3">
+    <img class="profpic" src="{{ asset('imgs/foto/dnn.png')}}">
+    <p class="name">DNN</p>
+    </div>
+    <div class="col m3">
+    <img class="profpic" src="{{ asset('imgs/foto/zak.png')}}">
+    <p class="name">ZAK</p>
     </div>
     <div class="col m3"></div>
-    {{-- <div class="col m12">
-      <h5>Daftar Asisten</h5>
-      <table class="table highlight">
-        <thead>
-          <tr>
-            <th>Kode Asisten</th>
-            <th>Nama Lengkap</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>TFD</td>
-            <td>Taufan Fadhilah Iskandar</td>
-          </tr>
-          <tr>
-            <td>NCP</td>
-            <td>Nur Cahyadi Perdana</td>
-          </tr>
-          <tr>
-            <td>AUL</td>
-            <td>Siti Aulia Noor</td>
-          </tr>
-          <tr>
-            <td>ZAK</td>
-            <td>Muhammad Reza Effendy</td>
-          </tr>
-          <tr>
-            <td>KEN</td>
-            <td>Niken Febriani Kusumawati</td>
-          </tr>
-          <tr>
-            <td>RFT</td>
-            <td>Siti Raftiana Putri</td>
-          </tr>
-          <tr>
-            <td>AHA</td>
-            <td>Amri Hanif</td>
-          </tr>
-          <tr>
-            <td>OJI</td>
-            <td>Aji Nur Laksono</td>
-          </tr>
-          <tr>
-            <td>BAY</td>
-            <td>Bayu Ariantika Irsan</td>
-          </tr>
-          <tr>
-            <td>IGO</td>
-            <td>Yudanto Anas Nugroho</td>
-          </tr>
-          <tr>
-            <td>KNA</td>
-            <td>Khania Putri Kusuma Dewi</td>
-          </tr>
-          <tr>
-            <td>GWD</td>
-            <td>Ginanjar Widya Pamungkas</td>
-          </tr>
-          <tr>
-            <td>NUB</td>
-            <td>Ghuniyu Fattah Rozaq</td>
-          </tr>
-          <tr>
-            <td>HAM</td>
-            <td>Muhammad Ilham</td>
-          </tr>
-          <tr>
-            <td>VNY</td>
-            <td>Veny Amilia Fitri</td>
-          </tr>
-          <tr>
-            <td>SAN</td>
-            <td>Muhamad Ikhsan Laisa</td>
-          </tr>
-          <tr>
-            <td>MAA</td>
-            <td>Moh. Akbar Anshory</td>
-          </tr>
-          <tr>
-            <td>DNN</td>
-            <td>Filhan Dennis</td>
-          </tr>
-        </tbody>
-      </table>
-    </div> --}}
   </div>
 </main>
 @endsection
