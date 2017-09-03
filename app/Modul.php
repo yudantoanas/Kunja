@@ -11,10 +11,8 @@ class Modul extends Model
     	'no_modul',
     	'judul_modul', 
     	'penyusun_modul', 
-    	'modul_image', 
     	'modul_file',
     	'tesawal_file',
-    	'tesakhir_file',
 	];
 
     public function praktikum() {

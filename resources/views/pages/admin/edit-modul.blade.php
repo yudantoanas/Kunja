@@ -14,28 +14,28 @@
             @endforeach
         </ul>
     @endif
-	<form method="post" action="{{ route('store') }}" enctype="multipart/form-data">
+	<form method="post" action="{{ route('update') }}" enctype="multipart/form-data">
 		{{ csrf_field() }}
 		<div class="row">
-	    	<h5>Tambah Modul : {{ $dataPraktikum->nama_praktikum }}</h5>
-	    	<input type="hidden" name="id_praktikum" value="{{ $dataPraktikum->id }}">
+	    	<h5>Edit Modul : {{ $modul->praktikum->nama_praktikum }}</h5>
+	    	<input type="hidden" name="id_praktikum" value="{{ $modul->id_praktikum }}">
 	    </div>
 
 		<div class="row">
 			<div class="input-field col s1">
-	          <input id="no_modul" type="text" 1lass="validate" placeholder="ex. 1" name="no_modul" required>
+	          <input id="no_modul" type="text" 1lass="validate" value="{{ $modul->no_modul }}" name="no_modul" required>
 	          <label for="no_modul">No</label>
 	        </div>
 
 			<div class="input-field col s11">
-	          <input id="judul" type="text" class="validate" placeholder="ex. Pengenalan OOP dan Inheritance" name="judul_modul" required>
+	          <input id="judul" type="text" class="validate" value="{{ $modul->judul_modul }}" name="judul_modul" required>
 	          <label for="judul">Judul Modul</label>
 	        </div>
 		</div>
 
 		<div class="row">
 			<div class="input-field col s12">
-	          <input id="penyusun" type="text" class="validate" placeholder="ex. OJI, VNY, ZAK" name="penyusun_modul" required>
+	          <input id="penyusun" type="text" class="validate" value="{{ $modul->penyusun_modul }}" name="penyusun_modul" required>
 	          <label for="penyusun">Penyusun</label>
 	        </div>
 		</div>
@@ -56,7 +56,7 @@
 		        <input type="file" name="tesawal_file">
 		      </div>
 		      <div class="file-path-wrapper">
-		        <input placeholder="Format file tes awal : PDF and max. size 10MB" class="file-path validate" type="text">
+		        <input value="{{ $modul->tesawal_file }}" class="file-path validate" type="text">
 		      </div>
 		    </div>
 
@@ -66,7 +66,7 @@
 		        <input type="file" name="modul_file">
 		      </div>
 		      <div class="file-path-wrapper">
-		        <input placeholder="Format file modul PDF and max. size 10MB" class="file-path validate" type="text">
+		        <input value="{{ $modul->modul_file }}" class="file-path validate" type="text">
 		      </div>
 		    </div>
 		</div>

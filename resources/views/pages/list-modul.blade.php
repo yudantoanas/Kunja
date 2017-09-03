@@ -14,7 +14,7 @@
         <div class="col s12 m4">
           <div class="card">
             <div class="card-image">
-              <img src="{{ asset('storage/' . $modul->modul_image) }}">
+              <img src="{{ asset('storage/modul-oop.png') }}">
 
               <!-- check if test akhir status is checked -->
               <!-- <a class="btn-floating halfway-fab waves-effect waves-light red" style="right: 120px;"><i class="material-icons">add</i></a> -->
@@ -23,7 +23,10 @@
               <a href="{{ URL('modul/' . $modul->id) }}" target="_blank" class="btn-floating btn-large halfway-fab waves-effect waves-light blue" style="right: 10px;"><i class="material-icons">open_in_new</i></a>
             </div>
             <div class="card-content" style="background-color: ghostwhite;">
-              <span class="card-title" style="color: black;">{{ $modul->judul_modul }}</span>
+              <span class="card-title" style="color: black;">Modul {{ $modul->no_modul. ' : ' .$modul->judul_modul }}</span>
+              @if(Auth::user())
+                <a href="{{ route('edit', ['id' => $modul->id]) }}}">Edit</a>
+              @endif
             </div>
           </div>
         </div>

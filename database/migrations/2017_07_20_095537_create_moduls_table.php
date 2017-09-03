@@ -19,10 +19,8 @@ class CreateModulsTable extends Migration
             $table->integer('no_modul');
             $table->string('judul_modul');
             $table->string('penyusun_modul');
-            $table->string('modul_image');
             $table->string('modul_file');
             $table->string('tesawal_file');
-            $table->string('tesakhir_file');
             $table->timestamps();
 
             $table->foreign('id_praktikum')->references('id')->on('praktikums')->onDelete('cascade');

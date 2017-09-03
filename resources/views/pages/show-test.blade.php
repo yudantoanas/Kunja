@@ -21,6 +21,10 @@
 					<input type="hidden" name="praktikum" value="{{ $modul->praktikum->nama_praktikum }}">
 
 					<div class="row">
+						<h4 align="center">Tes Awal</h4>
+					</div>
+
+					<div class="row">
 						<div class="input-field col s12 m3">
 							<input type="text" name="nama_praktikan" id="nama" required>
 							<label for="nama">Nama</label>
@@ -39,11 +43,10 @@
 						</div>
 					</div>
 
-				    @for($i=0; $i < 10; $i++)
-				    <div class="row">
+					{{-- Looping for option --}}
+				    @for($i=0; $i < 15; $i++)
+				    <div class="row" style="margin-bottom: 0;">
 			    		<strong class="col s2">{{ $i+1 }}</strong>
-
-			    			{{-- Looping the options --}}
 				    		@for($j=1; $j <= 5; $j++)
 				    		@php
 				    			$value = "";
@@ -66,7 +69,7 @@
 				    		@endfor
 				    </div>
 				    @endfor
-				    <button class="btn waves-effect waves-light blue white-text right" type="submit" name="action" style="margin-bottom: 20px">Submit
+				    <button class="btn waves-effect waves-light blue white-text" type="submit" name="action" style="margin: 0 auto; display: block; margin-top: 20px;">Submit
 				    	<i class="material-icons right">send</i>
 				  	</button>
 				    {{-- end of loop --}}

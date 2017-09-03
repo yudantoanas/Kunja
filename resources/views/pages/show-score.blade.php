@@ -13,17 +13,17 @@
 	@php
 		$say = "";
 		$color = "#000000";
-		if ($score == 10) {
-			$say = "Excelent Work!";
+		if ($score == 15) {
+			$say = "Mantap Gan!";
 			$color = "#8a2be2";
 		} elseif ($score >= 9) {
 			$say = "Good Work!";
 			$color = "#1e90ff";
 		} elseif ($score >= 7) {
-			$say = "Well done, you passed the test!";
+			$say = "Well done!";
 			$color = "#228b22";
 		} elseif ($score < 7) {
-			$say = "Sorry, you have to study more!";
+			$say = "Semangat yah!";
 			$color = "#90ee90";
 		}
 	@endphp
@@ -35,7 +35,7 @@
 		<div>
 			<i class="material-icons" style="color: {{ $color }}; font-size: 35px;">grade</i>
 			<strong style="font-size: 50px; margin-left: 10px;">
-				{{ $score }}
+				{{ $score }} of 15
 			</strong>
 		</div>
 	</div>
