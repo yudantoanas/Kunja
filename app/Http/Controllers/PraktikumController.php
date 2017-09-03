@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\TambahPraktikum;
+use App\Http\Requests\UpdatePraktikum;
 use Illuminate\Http\Request;
 
 use App\Praktikum;
@@ -30,7 +32,7 @@ class PraktikumController extends Controller
     }
 
     // storing praktikum data
-    public function store(Request $req) {
+    public function store(TambahPraktikum $req) {
     	Praktikum::create([
     		'nama_praktikum' => $req->nama_praktikum,
     		'jumlah_modul' => $req->jumlah_modul,
@@ -39,7 +41,7 @@ class PraktikumController extends Controller
     	return redirect('list-praktikum');
     }
 
-    public function update(Request $req) {
+    public function update(UpdatePraktikum $req) {
         $praktikum = Praktikum::find($req->id);
         $praktikum->nama_praktikum = $req->nama_praktikum;
         $praktikum->jumlah_modul = $req->jumlah_modul;

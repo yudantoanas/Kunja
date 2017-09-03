@@ -13,14 +13,20 @@ class UserSeeder extends Seeder
     {
         //
         DB::table('users')->delete();
-        User::create([
-          'name' => 'Taufan Fadhilah Iskandar',
-          'username' => 'TFD',
-          'email' => 'tfd@daspro.com',
-          'password' => bcrypt('asistenkece')
+        DB::table('users')->insert([
+            'name' => 'Muhammad Ilham',
+            'username' => 'HAM',
+            'email' => 'milham939@gmail.com',
+            'password' => bcrypt('asistenkece')
+        ]);
+        DB::table('users')->insert([
+            'name' => 'Taufan Fadhilah Iskandar',
+            'username' => 'TFD',
+            'email' => 'tfd@daspro.com',
+            'password' => bcrypt('asistenkece')
         ]);
 
-        User::create([
+        DB::table('users')->insert([
           'name' => 'Yudanto Anas Nugroho',
           'username' => 'IGO',
           'email' => 'igo@daspro.com',

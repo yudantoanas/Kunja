@@ -12,6 +12,10 @@ class Praktikum extends Model
 	];
 
 	public function modul() {
-		return $this->hasOne('App\Modul', 'id_praktikum', 'id');
+		return $this->hasOne('App\Modul');
 	}
+
+	public function praktikan(){
+	    return $this->hasMany('App\Praktikan');
+    }
 }

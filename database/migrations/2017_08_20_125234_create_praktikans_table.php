@@ -19,7 +19,13 @@ class CreatePraktikansTable extends Migration
             $table->string('nim');
             $table->string('kelas');
             $table->string('shift');
+            $table->integer('ta_score');
+            $table->integer('modul_id')->unsigned();
+            $table->integer('praktikum_id')->unsigned();
             $table->timestamps();
+
+            $table->foreign('modul_id')->references('id')->on('moduls')->onDelete('cascade');
+            $table->foreign('praktikum_id')->references('id')->on('moduls')->onDelete('cascade');
         });
     }
 

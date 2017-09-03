@@ -11,5 +11,16 @@ class Praktikan extends Model
 	    'nim',
 	    'kelas',
 	    'shift',
+        'ta_score',
+        'modul_id',
+        'praktikum_id'
     ];
+
+    public function modul(){
+        return $this->belongsTo('App\Modul');
+    }
+
+    public function praktikum(){
+        return $this->belongsTo('App\Praktikum');
+    }
 }
