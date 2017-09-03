@@ -108,14 +108,10 @@ class ModulController extends Controller
         $key = file_get_contents(
             'storage/keys/ta_modul' . $noModul . '.txt'
         );
-        /* end */
 
-        // counting score based on the answered choices
         $answer = $req->answer;
         $score = 0;
-        /*for ($i = 0; $i < strlen($key); $i++) {
-            if ($key[$i] == $answer[$i]) $score++;
-        }*/
+
         while($ele = current($answer)){
 
             if($key[key($answer)] == $ele) $score++;

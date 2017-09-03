@@ -15,7 +15,7 @@
                 <div class="col s12 m4">
                     <div class="card">
                         <div class="card-image">
-                            <img src="{{ asset('storage/modul-oop.png') }}">
+                            <img src="{{ asset('storage/modul-oop.jpg') }}">
 
                             <!-- check if test akhir status is checked -->
                             <!-- <a class="btn-floating halfway-fab waves-effect waves-light red" style="right: 120px;"><i class="material-icons">add</i></a> -->
@@ -43,7 +43,9 @@
                            class="btn-floating fab-bottom-right btn-large waves-effect waves-light red"><i
                                     class="material-icons">add</i></a>
                     </div>
-        @endif
+                @endif
+            @endforeach
+        </div>
     </main>
 @endsection
 
