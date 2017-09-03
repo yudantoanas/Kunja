@@ -19,7 +19,6 @@ class CreateModulsTable extends Migration
             $table->integer('no_modul');
             $table->string('judul_modul');
             $table->string('penyusun_modul');
-            $table->string('modul_image');
             $table->string('modul_file');
             $table->string('tesawal_file');
             $table->timestamps();

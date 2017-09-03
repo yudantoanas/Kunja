@@ -40,46 +40,43 @@ class ModulController extends Controller
         return view('pages.admin.add-modul', compact('dataPraktikum'));
     }
 
-    public function editModul($id)
-    {
-        $praktikum = Praktikum::find($id);
+    public function editModul($id) {
+        $modul = Modul::find($id);
 
-        return view('pages.admin.add-modul', compact('praktikum'));
+        return view('pages.admin.edit-modul', compact('modul')); 
     }
 
     // storing uploaded files
-    public function store(UploadRequest $req)
-    {
-        // storing uploaded image to storage/app/public/modul_thumb (public disk)
-        $image = $req->modul_image->store('modul/thumbs', 'public');
+    public function store(UploadRequest $req) {
+    	// storing uploaded image to storage/app/public/modul_thumb (public disk)
+    	// $image = $req->modul_image->storeAs('modul/thumbs', 'public');
 
         // storing pdf docs to ....
-        $modul = $req->modul_file->store('modul/files', 'public');
-        $tesawal = $req->tesawal_file->store('modul/files/tes_awal', 'public');
+        $modul = $req->modul_file->storeAs('modul/files', 'modul_'.$req->no_modul,'public');
+        $tesawal = $req->tesawal_file->storeAs('modul/files/tes_awal', 'tesawal_'.$req->no_modul,'public');
 
         $modulBaru = new Modul();
         $modulBaru->praktikum_id = $req->id_praktikum;
         $modulBaru->no_modul = $req->no_modul;
         $modulBaru->judul_modul = $req->judul_modul;
         $modulBaru->penyusun_modul = $req->penyusun_modul;
-        $modulBaru->modul_image = $image;
         $modulBaru->modul_file = $modul;
         $modulBaru->tesawal_file = $tesawal;
         $modulBaru->save();
 
-
-        /*Modul::create([
-            'id_praktikum' => $req->id_praktikum,
-            'no_modul' => $req->no_modul,
-            'judul_modul' => $req->judul_modul,
-            'penyusun_modul' => $req->penyusun_modul,
-            'modul_image' => $image, // store the path and filename
-            'modul_file' => $modul, // store the path and filename
-            'tesawal_file' => $tesawal, // store the path and filename
-            'tesakhir_file' => $tesakhir, // store the path and filename
-        ]);*/
-
         return redirect($req->id_praktikum . '/list-modul');
+    }
+
+    public function update(UploadRequest $req, $id) {
+        $modul = Modul::find($id);
+        $modul->no_modul = $req->no_modul;
+        $modul->judul_modul = $req->judul_modul;
+        $modul->penyusun_modul = $req->penyusun_modul;
+        $modul->modul_file = $req->modul_file;
+        $modul->tesawal_file = $req->tesawal_file;
+        $modul->save();
+
+        return redirect( $req->id_praktikum . '/list-modul');
     }
 
     // showing modul pdf

@@ -17,3 +17,16 @@
 .fab-card-right {
 	right: 0px;
 }
+
+
+.profpic {
+	display: block;
+	margin: 0 auto;
+}
+.name {
+	color: #5f5f5f;
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 28pt;
+	text-align: center;
+}

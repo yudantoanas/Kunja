@@ -20,12 +20,14 @@ Route::get('/', function () {
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('{id}/add-modul', 'ModulController@addModul');
-    Route::get('add-praktikum', 'PraktikumController@addPraktikum');
-    Route::get('edit-praktikum/{id}', 'PraktikumController@editPraktikum');
+		Route::get('add-praktikum', 'PraktikumController@addPraktikum');
+		Route::get('edit-praktikum/{id}', 'PraktikumController@editPraktikum');
+		Route::get('edit-modul/{id}', 'ModulController@editModul')->name('edit');
 
-    Route::post('store-modul', 'ModulController@store')->name('store');
-    Route::post('store-praktikum', 'PraktikumController@store');
-    Route::post('update-praktikum', 'PraktikumController@update');
+		Route::post('store-modul', 'ModulController@store')->name('store');
+		Route::post('update-modul', 'ModulController@update')->name('update');
+		Route::post('store-praktikum', 'PraktikumController@store');
+		Route::post('update-praktikum', 'PraktikumController@update');
 });
 
 Route::get('list-praktikum', 'PraktikumController@index');

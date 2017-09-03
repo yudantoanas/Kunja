@@ -1,18 +1,16 @@
 <nav>
   <div class="nav-wrapper blue">
 		<a href="/" class="brand-logo">
-	  	<img src="{{ URL::asset('imgs/logo-white.png') }}" width="200px">
+	  	<img src="{{ asset('imgs/header-logo-trans.png') }}" width="200px;">
 	  </a>
 		@if(Auth::user())
-    <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-		<ul id="dropdown1" class="dropdown-content">
-			<li><a href="/list-praktikum">List Praktikum</a></li>
-	    <li><a href="/add-praktikum">Tambah Praktikum</a></li>
-		</ul>
-    <ul class="right hide-on-med-and-down">
-			<!-- Dropdown Trigger -->
+    <a href="#!" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+		<ul class="right hide-on-med-and-down">
+      <!-- Dropdown Trigger -->
       <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Praktikum<i class="material-icons right">arrow_drop_down</i></a></li>
-			<li>
+
+      <!-- Logout button -->
+      <li>
             <a href="{{ route('logout') }}"
                 onclick="event.preventDefault();
                          document.getElementById('logout-form').submit();">
@@ -24,10 +22,17 @@
             </form>
         </li>
     </ul>
+    <!-- Dropdown menu -->
+    <ul id="dropdown1" class="dropdown-content">
+      <li><a href="/list-praktikum">List Praktikum</a></li>
+      <li><a href="/add-praktikum">Tambah Praktikum</a></li>
+    </ul>
+
+    <!-- Sidebar Nav -->
     <ul class="side-nav" id="mobile-demo">
-			<li><a href="/list-praktikum">List Praktikum</a></li>
-	    <li><a href="/add-praktikum">Tambah Praktikum</a></li>
-			<li>
+      <li><a href="/list-praktikum">List Praktikum</a></li>
+      <li><a href="/add-praktikum">Tambah Praktikum</a></li>
+      <li>
             <a href="{{ route('logout') }}"
                 onclick="event.preventDefault();
                          document.getElementById('logout-form').submit();">
@@ -43,11 +48,11 @@
 		<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 		<ul class="right hide-on-med-and-down">
 			<li><a href="/list-praktikum">List Praktikum</a></li>
-			{{-- <li><a href="/login">Login</a></li> --}}
+			<!-- <li><a href="/login">Login</a></li> -->
 		</ul>
 		<ul class="side-nav" id="mobile-demo">
       <li><a href="/list-praktikum">List Praktikum</a></li>
-			{{-- <li><a href="/login">Login</a></li> --}}
+			<!-- <li><a href="/login">Login</a></li> -->
 	@endif
   </div>
 </nav>

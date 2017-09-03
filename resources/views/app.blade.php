@@ -2,17 +2,17 @@
 <html lang="{{ app()->getLocale() }}">
 
 <style>
-    body{
+    body {
         display: flex;
         min-height: 100vh;
         flex-direction: column;
     }
 
-    main{
+    main {
         flex: 1 0 auto;
     }
 
-    #error_message{
+    #error_message {
         color: red;
         margin-bottom: 0px;
         margin-top: 0px;
@@ -25,6 +25,9 @@
     <title>
         {{ $title or "Aplikasi Praktikum SI 2017"}}
     </title>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="{{ URL::asset('imgs/favicon-32x32-trans.png') }}" sizes="32x32"/>
 
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
